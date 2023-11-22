@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <title>Login | Controle DE </title>
+</head>
+<body class="centralize">
+    <form>
+        <div class="form-field">
+            <div><Label>E-mail</Label></div>
+            <input type="email" id="email" onchange="onChangeEmail()" placeholder="Seu e-mail">
+            <div class="error" id="email-required-error">e-mail obrigatório</div>
+            <div class="error" id="email-invalid-error">e-mail inválido</div>
+        </div>
+
+        <div class="form-field">
+            <div><label>Senha</label></div>
+            <input type="password" name="password" id="password" onchange="onChangePassword()" placeholder="Senha">
+            <div class="error" id="password-required-error">senha obrigatória</div>
+
+        </div>
+
+        <div>
+            <button type="button" class="clear" id="recover-password-button" disabled="true" onclick="recoverPassword()">Recuperar senha</button>
+        </div>
+
+        <div>
+            <button type="button" class="solid" id="login-button" disabled="true" onclick="login()">Entrar</button>
+        </div>
+
+        <div>
+            <button type="button" class="outline" onclick="register()">Registrar</button>
+        </div>
+    </form>
+
+</body>
+
+<script src="js/validations.js"></script>
+<script src="js/global.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/10.6.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.6.0/firebase-auth-compat.js"></script>
+
+<script>      
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+       apiKey: "AIzaSyAZh-Lk7krPn16Ysv7ver0-0a3qFyELV6U",
+       authDomain: "controle-de-1508b.firebaseapp.com",
+       projectId: "controle-de-1508b",
+       storageBucket: "controle-de-1508b.appspot.com",
+       messagingSenderId: "738324908810",
+       appId: "1:738324908810:web:8f7eeb40b3c75691f808f3"
+    };
+      
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    
+</script>
+</html>

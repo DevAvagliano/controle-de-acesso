@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    
+    <title>Register | Controle DE </title>
+</head>
+<body class="centralize">
+    <form>
+        <div class="form-field">
+            <div><label>E-mail:</label></div>
+            <input type="email" id="email" placeholder="seu@email.com" onchange="onChangeEmail()" />
+            <div class="error" id="email-required-error">e-mail obrigatório</div>
+            <div class="error" id="email-invalid-error">e-mail inválido</div>
+        </div>
+
+        <div class="form-field">
+            <div><label>Senha:</label></div>
+            <input type="password" id="password" onchange="onChangePassword()" placeholder="Senha"/>
+            <div class="error" id="password-required-error">Senha obrigatória</div>
+            <div class="error" id="password-min-lenght-error">Senha deve ter pelo menos 6 caractares</div>
+
+
+        </div>
+
+        <div class="form-field">
+            <div><label>Confirmar senha:</label></div>
+            <input type="password" id="confirmPassword" onchange="onChangeConfirmPassword()" placeholder="Confirmar senha"/>
+            <div class="error" id="password-doesnt-match-error">Senha e Confirmar senha devem ser iguais</div>
+
+        </div>
+
+        <div>
+            <button type="button" class="solid" id="register-button" disabled="true">Registrar</button>
+        </div>
+
+        <div>
+            <button type="button" class="outline">Login</button>
+        </div>
+    </form>
+
+</body>
+
+<script src="/js/register.js"></script>
+<script src="/js/global.js"></script>
+
+</html>
