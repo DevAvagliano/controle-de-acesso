@@ -28,12 +28,13 @@ input {
     border: none;
 }
 
-label {
-    font-weight: 400;
+input:focus {
+  border-radius: 10px;
+  border: solid 1px #4f9cf9;
 }
 
-input,
-button {
+
+input, button {
     padding: 10px;
     width: -webkit-fill-available;
 }
